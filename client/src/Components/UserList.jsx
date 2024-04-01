@@ -65,7 +65,7 @@ const UsersList = () => {
     const gender = selectedGender ? `&gender=${selectedGender}` : '';
     const availability = selectedAvailability ? `&availability=${selectedAvailability}` : '';
 
-    const response = await fetch(`http://localhost:3000/api/users?q=${search}${domain}${gender}${availability}&page=${currentPage}&limit=${pageSize}`);
+    const response = await fetch(`https://heliverse-assignment-c3te.onrender.com/api/users?q=${search}${domain}${gender}${availability}&page=${currentPage}&limit=${pageSize}`);
     const data = await response.json();
     setUsers(data.data);
     setTotalPages(data.totalPages);
